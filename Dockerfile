@@ -12,6 +12,7 @@ RUN apt update
 RUN apt install netcat vim git gcc ssh curl wget gdb sudo zsh python3 python3-pip libffi-dev build-essential libssl-dev libc6-i386 libc6-dbg gcc-multilib make -y
 
 RUN dpkg --add-architecture i386
+RUN apt update
 RUN apt install libc6:i386 -y
 
 RUN python3 -m pip install --upgrade pip
